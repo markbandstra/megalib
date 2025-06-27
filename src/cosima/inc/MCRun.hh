@@ -87,7 +87,7 @@ public:
   int GetIncarnationID() { return m_IncarnationID; }
 
   /// Set the file name of this run. Returns always true - call CheckIncarnation() afterwards
-  bool SetFileName(const MString& FileName) { m_FileName = FileName; /* CheckIncarnationID(); */ return true; }
+  bool SetFileName(const MString& FileName) { m_FileName = FileName; CheckIncarnationID(); return true; }
   /// Returns the name of the underlaying file (empty string if there is none, i.e. no saving of the file is wished)
   MString GetFileName() const { return m_FileName; }
   

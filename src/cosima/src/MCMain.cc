@@ -103,9 +103,9 @@ bool MCMain::Initialize()
   for (unsigned int r = 0; r < Runs.size(); ++r) {
     Runs[r].SetZip(m_Zip);
     Runs[r].SetStoreBinary(m_RunParameters.StoreBinary());
-    Runs[r].SetIncarnationID(m_IncarnationID);
+    // Runs[r].SetIncarnationID(m_IncarnationID);  // MSB: already done earlier
     Runs[r].SetParallelID(m_ParallelID);
-    Runs[r].CheckIncarnationID();
+    // Runs[r].CheckIncarnationID();  // MSB: already done earlier
   }
 
   // set mandatory initialization classes

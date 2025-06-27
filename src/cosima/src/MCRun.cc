@@ -67,7 +67,7 @@ MCRun::MCRun()
   m_ParallelID = 0;  
   m_IncarnationID = 0;  
   m_IsIncarnationIDFixed = false;
-  m_Zip = false;
+  m_Zip = true;
   m_StoreBinary = false;
   
   m_TcpIpHostName = "";
