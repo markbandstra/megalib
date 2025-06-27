@@ -20,7 +20,7 @@ RUN mkdir /opt/MEGAlib && chown -R mrmegalib:mrmegalib /opt/MEGAlib
 USER mrmegalib
 
 # Setup MEGAlib
-RUN cd /home/mrmegalib && git clone https://github.com/zoglauer/megalib.git MEGAlib && cd /home/mrmegalib/MEGAlib && /bin/bash setup.sh --ex=/opt/MEGAlib  --branch=main --clean=yes
+RUN cd /home/mrmegalib && git clone https://github.com/markbandstra/megalib.git MEGAlib && cd /home/mrmegalib/MEGAlib && /bin/bash setup.sh --ex=/opt/MEGAlib  --branch=main --clean=yes
 RUN echo . /home/mrmegalib/MEGAlib/bin/source-megalib.sh >> /home/mrmegalib/.bashrc
 
 # Switch back to ROOT

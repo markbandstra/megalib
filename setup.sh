@@ -619,7 +619,7 @@ if [ -d $MEGALIBPATH ]; then
 
     if [ "${BRANCH}" == "" ]; then
 
-      BRANCH=`git ls-remote --heads https://github.com/zoglauer/megalib.git | grep -v alpha | grep -v beta | grep MEGAlib_v | awk -F"refs/heads/" '{ print $2 }' | sort -n | tail -n 1`
+      BRANCH=`git ls-remote --heads https://github.com/markbandstra/megalib.git | grep -v alpha | grep -v beta | grep MEGAlib_v | awk -F"refs/heads/" '{ print $2 }' | sort -n | tail -n 1`
       if [ "${CurrentBranch}" != "${Branch}" ]; then
         echo "Switching to latest release version of MEGAlib from the git repository..."
         git checkout ${BRANCH}
@@ -672,7 +672,7 @@ else
   fi
 
   echo "Using git to clone the MEGAlib directory..."
-  git clone https://github.com/zoglauer/megalib.git ${MEGALIBPATH}
+  git clone https://github.com/markbandstra/megalib.git ${MEGALIBPATH}
   if [ "$?" != "0" ]; then
     echo " "
     echo "ERROR: Unable to checkout the latest development version from git"
@@ -681,7 +681,7 @@ else
   if [[ ${BRANCH} == "" ]]; then
     if [ "${RELEASE}" == "rel" ]; then
       echo "Switching to latest release version of MEGAlib from the git repository..."
-      Branch=`git ls-remote --heads https://github.com/zoglauer/megalib.git | grep -v alpha | grep -v beta | grep MEGAlib_v | awk -F"refs/heads/" '{ print $2 }' | sort -n | tail -n 1`
+      Branch=`git ls-remote --heads https://github.com/markbandstra/megalib.git | grep -v alpha | grep -v beta | grep MEGAlib_v | awk -F"refs/heads/" '{ print $2 }' | sort -n | tail -n 1`
       if ( [ "$?" != "0" ] || [ "${Branch}" == "" ] ); then
         echo " "
         echo "ERROR: Unable to find the latest release branch"
